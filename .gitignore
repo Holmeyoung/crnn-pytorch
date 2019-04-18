@@ -1,0 +1,10 @@
+.DS_Store
+*.pth
+*.pyc
+*.pyo
+*.log
+*.tmp
+*.swp
+*.out
+*.mdb
+*__pycache__/
