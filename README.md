@@ -121,10 +121,12 @@
    三千里
    absolute/path/to/image/一剑曾当百万师_2.jpg
    一剑曾当百万师
-   absolute/path/to/image/一剑曾当百万师_3.jpg
+   absolute/path/to/image/3.jpg
    一剑曾当百万师
    absolute/path/to/image/一 剑 曾 当 百 万 师_4.jpg
    一 剑 曾 当 百 万 师
+   absolute/path/to/image/xxx.jpg
+   label of xxx.jpg
    .
    .
    .
@@ -141,7 +143,7 @@
 2. Run the `create_dataset.py` in `tool` folder by
 
    ```sh
-   python tool/create_dataset.py --out lmdb/data/output/path --folder path/to/file
+   python tool/create_dataset.py --out lmdb/data/output/path --file path/to/file
    ```
 
    
