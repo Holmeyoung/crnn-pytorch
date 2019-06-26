@@ -9,11 +9,17 @@ import sys
 def checkImageIsValid(imageBin):
     if imageBin is None:
         return False
-    imageBuf = np.fromstring(imageBin, dtype=np.uint8)
-    img = cv2.imdecode(imageBuf, cv2.IMREAD_GRAYSCALE)
-    imgH, imgW = img.shape[0], img.shape[1]
-    if imgH * imgW == 0:
+    
+    try:
+        imageBuf = np.fromstring(imageBin, dtype=np.uint8)
+        img = cv2.imdecode(imageBuf, cv2.IMREAD_GRAYSCALE)
+        imgH, imgW = img.shape[0], img.shape[1]
+    except:
         return False
+    else:
+        if imgH * imgW == 0:
+            return False
+    
     return True
 
 
