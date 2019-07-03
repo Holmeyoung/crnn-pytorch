@@ -46,7 +46,7 @@ else:
 train_loader = torch.utils.data.DataLoader(train_dataset, batch_size=params.batchSize, \
         shuffle=True, sampler=sampler, num_workers=int(params.workers), \
         collate_fn=dataset.alignCollate(imgH=params.imgH, imgW=params.imgW, keep_ratio=params.keep_ratio))
-test_dataset = dataset.lmdbDataset(root=args.valroot, transform=dataset.resizeNormalize((100, 32)))
+test_dataset = dataset.lmdbDataset(root=args.valroot, transform=dataset.resizeNormalize((params.imgW, params.imgH)))
 
 # -------------------------------------------------------------------------------------------------
 # net init
