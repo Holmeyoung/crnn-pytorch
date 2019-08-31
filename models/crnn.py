@@ -1,5 +1,6 @@
 import torch.nn as nn
 import params
+import torch.nn.functional as F
 
 class BidirectionalLSTM(nn.Module):
 
@@ -65,9 +66,6 @@ class CRNN(nn.Module):
             BidirectionalLSTM(512, nh, nh),
             BidirectionalLSTM(nh, nh, nclass))
 
-        # replace all nan/inf in gradients to zero
-        if params.dealwith_lossnone:
-            self.register_backward_hook(self.backward_hook)
 
     def forward(self, input):
         # conv features
@@ -79,10 +77,14 @@ class CRNN(nn.Module):
 
         # rnn features
         output = self.rnn(conv)
+        
+        # add log_softmax to converge output
+        output = F.log_softmax(output, dim=2)
 
         return output
-    
+
+
     def backward_hook(self, module, grad_input, grad_output):
         for g in grad_input:
             g[g != g] = 0   # replace all nan/inf in gradients to zero
-   
+

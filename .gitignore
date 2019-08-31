@@ -8,3 +8,4 @@
 *.out
 *.mdb
 *__pycache__/
+*.vscode/

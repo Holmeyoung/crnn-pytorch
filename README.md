@@ -1,11 +1,28 @@
 # Convolutional Recurrent Neural Network + CTCLoss 
 
+I think i have fixed the ctcloss nan problem! 
+
+Many people open issues under this project, saying they meet ctcloss nan. Now, it's my turn. When i use the project of myself, oh my god, why there is ctcloss nan?! Many minutes, hours, days, i think about this over and over again. 
+
+Now!
+
+Please pull the latest code from master.
+
+Please update the pytorch to  `>= v1.2.0`
+
+Enjoy it!
+
+> PS: Once there is ctclossnan, please
+> 1. Change the `batchSize` to smaller (eg: 8, 16, 32)
+> 2. Change the `lr` to smaller (eg: 0.00001, 0.0001)
+> 3. Contact me by emailing to holmeyoung@gmail.com
+
 ## Dependence
 
 - CentOS7
 - Python3.6.5
-- torch==1.0.1
-- torchvision==0.2.2
+- torch==1.2.0
+- torchvision==0.4.0
 - Tesla P40 - Nvidia
 
 ## Run demo
@@ -52,7 +69,7 @@
 
   Just don't know why, but when i train the net, the loss always become `nan` after several epoch.
 
-  I add a param `dealwith_lossnone` to `params.py` . If set it to `True` , the net will autocheck and replace all `nan/inf` in gradients to zero.
+  I add a param `dealwith_lossnan` to `params.py` . If set it to `True` , the net will autocheck and replace all `nan/inf` in gradients to zero.
 
 
 

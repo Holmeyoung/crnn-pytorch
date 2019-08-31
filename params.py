@@ -11,7 +11,7 @@ nh = 256 # size of the lstm hidden state
 nc = 1
 pretrained = '' # path to pretrained model (to continue training)
 expr_dir = 'expr' # where to store samples and models
-dealwith_lossnone = True # whether to replace all nan/inf in gradients to zero
+dealwith_lossnan = False # whether to replace all nan/inf in gradients to zero
 
 # hardware
 cuda = True # enables cuda
@@ -23,7 +23,7 @@ workers = 0 # number of data loading workers
 displayInterval = 100 # interval to be print the train loss
 valInterval = 1000 # interval to val the model loss and accuray
 saveInterval = 1000 # interval to save model
-n_test_disp = 10 # number of samples to display when val the model
+n_val_disp = 10 # number of samples to display when val the model
 
 # finetune
 nepoch = 1000 # number of epochs to train for
