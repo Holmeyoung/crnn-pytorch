@@ -106,6 +106,13 @@ converter = utils.strLabelConverter(params.alphabet)
 # -----------------------------------------------
 """
 In this block
+    criterion define
+"""
+criterion = CTCLoss()
+
+# -----------------------------------------------
+"""
+In this block
     Init some tensor
     Put tensor and net on cuda
     NOTE:
@@ -117,8 +124,8 @@ text = torch.LongTensor(params.batchSize * 5)
 length = torch.LongTensor(params.batchSize)
 
 if params.cuda and torch.cuda.is_available():
-    image = image.cuda()
     criterion = criterion.cuda()
+    image = image.cuda()
     text = text.cuda()
 
     crnn = crnn.cuda()
@@ -140,13 +147,6 @@ elif params.adadelta:
     optimizer = optim.Adadelta(crnn.parameters())
 else:
     optimizer = optim.RMSprop(crnn.parameters(), lr=params.lr)
-
-# -----------------------------------------------
-"""
-In this block
-    criterion define
-"""
-criterion = CTCLoss()
 
 # -----------------------------------------------
 """

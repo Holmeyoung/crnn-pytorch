@@ -50,8 +50,8 @@ class strLabelConverter(object):
                 index = self.dict[char]
                 # result.append(index)
                 r.append(index)
-            
             result.append(r)
+        
         max_len = 0
         for r in result:
             if len(r) > max_len:
