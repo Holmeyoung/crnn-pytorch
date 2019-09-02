@@ -176,7 +176,7 @@ if params.dealwith_lossnan:
 
 # -----------------------------------------------
 
-def val(net, criterion, max_iter=100):
+def val(net, criterion):
     print('Start val')
 
     for p in crnn.parameters():
@@ -189,7 +189,7 @@ def val(net, criterion, max_iter=100):
     n_correct = 0
     loss_avg = utils.averager() # The blobal loss_avg is used by train
 
-    max_iter = min(max_iter, len(val_loader))
+    max_iter = len(val_loader)
     for i in range(max_iter):
         data = val_iter.next()
         i += 1

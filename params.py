@@ -28,7 +28,7 @@ n_val_disp = 10 # number of samples to display when val the model
 # finetune
 nepoch = 1000 # number of epochs to train for
 batchSize = 64 # input batch size
-lr = 0.001 # learning rate for Critic, not used by adadealta
+lr = 0.0001 # learning rate for Critic, not used by adadealta
 beta1 = 0.5 # beta1 for adam. default=0.5
 adam = False # whether to use adam (default is rmsprop)
 adadelta = False # whether to use adadelta (default is rmsprop)
