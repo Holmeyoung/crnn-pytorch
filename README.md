@@ -1,8 +1,6 @@
 # Convolutional Recurrent Neural Network + CTCLoss 
 
-I think i have fixed the ctcloss nan problem! 
-
-Many people open issues under this project, saying they meet ctcloss nan. Now, it's my turn. When i use the project of myself, oh my god, why there is ctcloss nan?! Many minutes, hours, days, i think about this over and over again. 
+I think i have fixed the ctcloss nan problem!
 
 Now!
 
