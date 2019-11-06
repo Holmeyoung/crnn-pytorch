@@ -26,6 +26,7 @@ Enjoy it!
 ## Run demo
 
 - Download a pretrained model from [Baidu Cloud](https://pan.baidu.com/s/1FmJhYf1Wy-LUaz4V2WpF7g) (extraction code: `si32`)
+- People who cannot access Baidu can download a copy from [Google Drive](https://drive.google.com/drive/folders/1FhXvPtitX6tWYocFZiZBRzVHjK2o640u?usp=sharing)
 
 - Run demo
 
